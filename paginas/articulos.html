@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artículos de Natación | Acuática</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/articulos.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
+        if (menuToggle && mainNav) {
+          // Inicializa el estado ARIA
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menuToggle.addEventListener("click", () => {
+            const isActive = mainNav.classList.toggle("active");
+            // Actualiza el estado ARIA
+            menuToggle.setAttribute("aria-expanded", isActive);
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="../index.html" class="logo-link">
+        <div class="logo">Acuática</div>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="articulos.html">Artículos</a></li>
+          <li><a href="entrenamiento.html">Entrenamiento</a></li>
+          <li><a href="ocio-familia.html">Ocio y Familia</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="catalogue-layout">
+      <aside class="sidebar">
+        <h3>Filtros y Categorías</h3>
+        <ul class="filter-list">
+          <li><a href="#">Gafas de Natación</a></li>
+          <li><a href="#">Gorros y Cubiertas</a></li>
+          <li><a href="#">Trajes de Baño (Hombre/Mujer)</a></li>
+          <li><a href="#">Aletas y Tablas</a></li>
+          <li><a href="#">Accesorios de Seguridad</a></li>
+        </ul>
+
+        <h3>Marca</h3>
+        <ul class="filter-list">
+          <li>
+            <input type="checkbox" id="brand1" /><label for="brand1"
+              >HydroFlow</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="brand2" /><label for="brand2"
+              >Acuática Pro</label
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <section class="product-grid">
+        <h2>Catálogo Completo</h2>
+
+        <div class="product-card">
+          <img src="../img/articulos/gafas.jpg" alt="Gafas ProTech" />
+          <h3>Gafas de Natación ProTech</h3>
+          <p class="price">$25.99</p>
+          <p class="description">
+            Máxima comodidad y anti-niebla para largas sesiones.
+          </p>
+          <a href="#" class="add-to-cart">Añadir al Carrito</a>
+        </div>
+
+        <div class="product-card">
+          <img src="../img/articulos/gorro.jpg" alt="Gorro AquaFit Silicona" />
+          <h3>Gorro AquaFit Silicona</h3>
+          <p class="price">$12.50</p>
+          <p class="description">
+            Ajuste seguro y protección UV para cabello largo.
+          </p>
+          <a href="#" class="add-to-cart">Añadir al Carrito</a>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="../img/articulos/traje.jpg"
+            alt="Traje de Baño Competición"
+          />
+          <h3>Traje Competición H2O (M)</h3>
+          <p class="price">$55.99</p>
+          <p class="description">
+            Diseñado para la resistencia y la velocidad en carrera.
+          </p>
+          <a href="#" class="add-to-cart">Añadir al Carrito</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2025 Acuática. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

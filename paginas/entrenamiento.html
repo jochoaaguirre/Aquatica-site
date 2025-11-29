@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrenamiento y Bienestar | Acuática</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/entrenamiento.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
+        if (menuToggle && mainNav) {
+          // Inicializa el estado ARIA
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menuToggle.addEventListener("click", () => {
+            const isActive = mainNav.classList.toggle("active");
+            // Actualiza el estado ARIA
+            menuToggle.setAttribute("aria-expanded", isActive);
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="../index.html" class="logo-link">
+        <div class="logo">Acuática</div>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="articulos.html">Artículos</a></li>
+          <li><a href="entrenamiento.html">Entrenamiento</a></li>
+          <li><a href="ocio-familia.html">Ocio y Familia</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content-page">
+      <section
+        class="banner-entrenamiento"
+        style="
+          background-image: url('../img/banners/pexels-kaitlyn-jade-1067488-3984762-opt.jpg');
+        "
+      >
+        <h1>Lleva tu Rendimiento al Máximo Nivel</h1>
+        <p>Guías, nutrición y equipo esencial para el nadador dedicado.</p>
+      </section>
+
+      <section class="info-sections">
+        <h2>Accesorios que Impulsan tu Técnica</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img
+              src="../img/banners/pexels-leticia-azevedo-95410198-9384706-opt.jpg"
+              alt="Aletas de entrenamiento"
+            />
+            <h3>Aletas: Potencia y Resistencia</h3>
+            <p>
+              Mejora tu patada y simula la carga muscular de la natación de alta
+              velocidad. Encuentra la talla perfecta en nuestro catálogo.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <img
+              src="../img/contenido/alto-angulo-de-nadador-masculino-mantenerse-hidratado-con-espacio-de-copia-opt.jpg"
+              alt="Hidratación"
+            />
+            <h3>Nutrición y Recuperación</h3>
+            <p>
+              Las pautas correctas de hidratación son tan importantes como el
+              entrenamiento. Consejos profesionales y productos para tu
+              post-entreno.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <img
+              src="../img/productos/pexels-kaitlyn-jade-1067488-3984762.jpg"
+              alt="Mejora de la técnica"
+            />
+            <h3>Perfecciona la Brazada</h3>
+            <p>
+              Artículos como tablas y manoplas son clave para aislar grupos
+              musculares y corregir la técnica sin esfuerzo excesivo.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="callout">
+        <h3>¿Listo para el Desafío?</h3>
+        <p>
+          Explora nuestra sección de equipo avanzado, diseñado para la
+          competición.
+        </p>
+        <a href="articulos.html?category=entrenamiento" class="cta-button"
+          >Ver Equipo Profesional</a
+        >
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2025 Acuática. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

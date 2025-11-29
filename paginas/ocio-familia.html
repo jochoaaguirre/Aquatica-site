@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ocio y Diversión Familiar | Acuática</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/ocio.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
+        if (menuToggle && mainNav) {
+          // Inicializa el estado ARIA
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menuToggle.addEventListener("click", () => {
+            const isActive = mainNav.classList.toggle("active");
+            // Actualiza el estado ARIA
+            menuToggle.setAttribute("aria-expanded", isActive);
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="../index.html" class="logo-link">
+        <div class="logo">Acuática</div>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="articulos.html">Artículos</a></li>
+          <li><a href="entrenamiento.html">Entrenamiento</a></li>
+          <li><a href="ocio-familia.html">Ocio y Familia</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content-page">
+      <section
+        class="banner-ocio"
+        style="
+          background-image: url('../img/banners/pexels-koolshooters-9872738-opt.jpg');
+        "
+      >
+        <h1>Seguridad y Diversión para Toda la Familia</h1>
+        <p>Convierte cada día en la piscina o la playa en una aventura.</p>
+      </section>
+
+      <section class="category-focus">
+        <h2>Nuestra Selección de Artículos Familiares</h2>
+
+        <div class="focus-item reverse">
+          <img
+            src="../img/contenido/pexels-koolshooters-9872738-opt.jpg"
+            alt="Juguetes de piscina"
+          />
+          <div class="text-content">
+            <h3>Juegos y Flotadores</h3>
+            <p>
+              Desde juguetes interactivos hasta flotadores temáticos y tablas de
+              iniciación para los más pequeños. Fomenta la confianza en el agua
+              de forma divertida y segura.
+            </p>
+            <a href="articulos.html?category=juguetes" class="cta-button"
+              >Ver Juguetes</a
+            >
+          </div>
+        </div>
+
+        <div class="focus-item">
+          <img
+            src="../img/contenido/pexels-kampus-6539728-opt.jpg"
+            alt="Protectores solares y accesorios"
+          />
+          <div class="text-content">
+            <h3>Protección y Confort</h3>
+            <p>
+              La seguridad es lo primero. En esta sección encontrarás chalecos
+              salvavidas, protectores UV y toallas de secado rápido, pensando en
+              la piel sensible de los niños.
+            </p>
+            <a href="articulos.html?category=seguridad" class="cta-button"
+              >Ver Seguridad</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2025 Acuática. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

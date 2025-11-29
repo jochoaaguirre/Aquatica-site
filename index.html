@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acuática | Tu Pasión por el Agua</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
+        if (menuToggle && mainNav) {
+          // Inicializa el estado ARIA
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menuToggle.addEventListener("click", () => {
+            const isActive = mainNav.classList.toggle("active");
+            // Actualiza el estado ARIA
+            menuToggle.setAttribute("aria-expanded", isActive);
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="index.html" class="logo-link">
+        <div class="logo">Acuática</div>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="paginas/articulos.html">Artículos</a></li>
+          <li><a href="paginas/entrenamiento.html">Entrenamiento</a></li>
+          <li><a href="paginas/ocio-familia.html">Ocio y Familia</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section
+      class="hero-banner"
+      style="background-image: url('img/banners/swimmers-79592_1920-opt.jpg')"
+    >
+      <div class="hero-content">
+        <h1>Sumérgete en la Calidad.</h1>
+        <p>Tu Equipo para el Alto Rendimiento y el Ocio Acuático.</p>
+        <a href="paginas/articulos.html" class="cta-button">Ver Catálogo</a>
+      </div>
+    </section>
+
+    <section class="categories-grid">
+      <h2>Encuentra tu Equipamiento Ideal</h2>
+
+      <div class="category-card-wrapper">
+        <a href="paginas/articulos.html" class="category-card-item">
+          <img
+            src="img/productos/nadador-masculino-con-gafas-y-gorra-en-la-piscina-opt-1-1.jpg"
+            alt="Artículos Esenciales"
+          />
+          <h3>Artículos Esenciales</h3>
+          <p>
+            Gafas y gorros con el diseño y material que necesitas para cada
+            brazada.
+          </p>
+        </a>
+
+        <a href="paginas/entrenamiento.html" class="category-card-item">
+          <img
+            src="img/contenido/alto-angulo-de-nadador-masculino-mantenerse-hidratado-con-espacio-de-copia-opt.jpg"
+            alt="Entrenamiento y Bienestar"
+          />
+          <h3>Entrenamiento y Bienestar</h3>
+          <p>Accesorios para perfeccionar tu técnica y guías de hidratación.</p>
+        </a>
+
+        <a href="paginas/ocio-familia.html" class="category-card-item">
+          <img
+            src="img/contenido/pexels-kindelmedia-9043983-opt.jpg"
+            alt="Ocio y Familia"
+          />
+          <h3>Ocio y Familia</h3>
+          <p>
+            Flotadores, juguetes y equipamiento para que la diversión en el agua
+            sea segura.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section
+      class="secondary-banner"
+      style="
+        background-image: url('img/banners/pexels-leticia-azevedo-95410198-9384706-opt.jpg');
+      "
+    >
+      <div class="banner-content">
+        <h2>Explora la Aventura</h2>
+        <p>Trajes, Aletas y Accesorios para Aguas Abiertas.</p>
+        <a href="paginas/articulos.html" class="cta-button">Ver Productos</a>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <p>&copy; 2025 Acuática. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
